@@ -1,0 +1,9 @@
+<p>Menu</p>
+
+<ul>
+    <li *ngFor="let page of links$ | async">        
+        <a routerLink="{{page.route}}" routerLinkActive="active">
+            {{ page.title }}
+        </a>
+    </li>
+</ul>

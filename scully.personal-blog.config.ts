@@ -4,6 +4,12 @@ export const config: ScullyConfig = {
   projectName: "personal-blog",
   outDir: './dist/static',
   routes: {
+    '/blog/:title': {
+      type: 'contentFolder',
+      title: {
+        folder: "./mdblog"
+      }
+    },
     '/blog/:slug': {
       type: 'contentFolder',
       slug: {
