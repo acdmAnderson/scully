@@ -1,0 +1,7 @@
+<nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let page of links$ | async" routerLink="{{page.route}}" routerLinkActive="active"
+        (click)="activeLink = page.title" [active]="activeLink == page.title">
+        {{ page.title ? page.title : 'Home' }}
+    </a>
+</nav>
+<router-outlet></router-outlet>

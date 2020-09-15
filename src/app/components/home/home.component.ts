@@ -10,13 +10,14 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 export class HomeComponent implements OnInit {
 
   links$: Observable<ScullyRoute[]> = this.scully.available$;
-
+  activeLink;
   constructor(private scully: ScullyRoutesService) { }
 
   ngOnInit() {
     // debug current pages
     this.links$.subscribe((links) => {
       console.log(links);
+      this.activeLink = links[0]?.title;
     });
   }
 }
