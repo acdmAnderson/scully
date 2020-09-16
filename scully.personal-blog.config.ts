@@ -1,4 +1,4 @@
-import { ScullyConfig } from '@scullyio/scully';
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "personal-blog",
@@ -18,3 +18,5 @@ export const config: ScullyConfig = {
     }
   }
 };
+
+setPluginConfig('md', { enableSyntaxHighlighting: true });

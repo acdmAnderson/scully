@@ -1,7 +1,29 @@
-<nav mat-tab-nav-bar>
-    <a mat-tab-link *ngFor="let page of links$ | async" routerLink="{{page.route}}" routerLinkActive="active"
-        (click)="activeLink = page.title" [active]="activeLink == page.title">
-        {{ page.title ? page.title : 'Home' }}
-    </a>
-</nav>
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="toolbar">
+        <mat-toolbar [color]="'primary'" class="mat-elevation-z5">
+            <span>Anderson Costa</span>
+            <span class="example-spacer mr-2"></span>
+            <nav mat-tab-nav-bar [color]="'accent'" [backgroundColor]="'primary'">
+                <a mat-tab-link *ngFor="let page of links$ | async" routerLink="{{page.route}}"
+                    routerLinkActive="active" [active]="activeLink == page.route">
+                    <ng-template [ngIf]=""></ng-template>
+                    {{ page.title ? page.title : 'Home' }}
+                </a>
+            </nav>
+            <span class="pull-right mr-2 d-flex">
+                <button mat-icon-button class="example-icon favorite-icon"
+                    aria-label="Example icon-button with heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>share</mat-icon>
+                </button>
+                <img class="avatar" [src]="!isProduction ? '/assets/img/profile.jpg' : '/assets/img/_profile.jpg'"
+                    alt="image">
+            </span>
+        </mat-toolbar>
+    </div>
+    <div class="content vertical-divider">        
+        <router-outlet></router-outlet>
+    </div>
+</div>
