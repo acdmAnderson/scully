@@ -5,8 +5,7 @@
             <span class="example-spacer mr-2"></span>
             <nav mat-tab-nav-bar [color]="'accent'" [backgroundColor]="'primary'">
                 <a mat-tab-link *ngFor="let page of links$ | async" routerLink="{{page.route}}"
-                    routerLinkActive="active" [active]="activeLink == page.route">
-                    <ng-template [ngIf]=""></ng-template>
+                    routerLinkActive="active" [active]="activeLink == page.route">                    
                     {{ page.title ? page.title : 'Home' }}
                 </a>
             </nav>

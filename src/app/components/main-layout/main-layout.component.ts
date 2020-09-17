@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subject, } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { Observable, Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-main-layout',
+  templateUrl: './main-layout.component.html',
+  styleUrls: ['./main-layout.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class MainLayoutComponent implements OnInit, OnDestroy {
 
   //public
   public links$: Observable<ScullyRoute[]>;
