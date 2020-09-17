@@ -1,0 +1,10 @@
+.home-content {
+  text-align: justify;  
+}
+img {
+  width: 960px;
+  height: 500px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}

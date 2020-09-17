@@ -1,7 +1,7 @@
 <div class="container">
     <div class="toolbar">
         <mat-toolbar [color]="'primary'" class="mat-elevation-z5">
-            <span>Anderson Costa</span>
+            <span>{{ TITLE }}</span>
             <span class="example-spacer mr-2"></span>
             <nav mat-tab-nav-bar [color]="'accent'" [backgroundColor]="'primary'">
                 <a mat-tab-link *ngFor="let page of links$ | async" routerLink="{{page.route}}"

@@ -15,6 +15,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   public links$: Observable<ScullyRoute[]>;
   public activeLink: string;
   public isProduction: boolean = environment.production;
+  public readonly TITLE = `<Coffee/> House`;
 
   //private
   private unsubscribeAll: Subject<any>;
@@ -30,7 +31,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
       )
     this.scully.getCurrent()
       .pipe(takeUntil(this.unsubscribeAll))
-      .subscribe((scullyRoute) => this.activeLink = scullyRoute.route);
+      .subscribe((scullyRoute) => this.activeLink = scullyRoute?.route || '/');
   }
 
   ngOnDestroy(): void {

@@ -8,6 +8,7 @@ const routes: Routes = [
   {
     path: '', component: MainLayoutComponent,
     children: [
+      { path: '', redirectTo: 'home', pathMatch: 'prefix', },
       {
         path: 'home', component: HomeComponent
       },
