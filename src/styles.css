@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~prismjs/themes/prism-okaidia.css';
+@import '~prismjs/plugins/autolinker/prism-autolinker.css';
+
 body {
   margin-right: auto;
   margin-left: auto;
